@@ -11,10 +11,20 @@ class ResultScreen extends StatefulWidget {
 }
 
 class _ResultScreenState extends State<ResultScreen> {
+  String _getBmiCategoryTitle() {
+    if (widget.bmiResult < 16) {
+      return "Severe Thinness";
+    } else if (widget.bmiResult > 16 && widget.bmiResult < 17.0) {
+      return "Moderate Thinness";
+    } else if (widget.bmiResult >= 17.0 && widget.bmiResult <= 18.5) {
+      return "Mild Thinness";
+    } else {
+      return "Overweight";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    print("${widget.bmiResult}");
-
     return Scaffold(
       backgroundColor: Color(0xFF0A0F21),
       appBar: AppBar(
@@ -54,7 +64,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "OVERWEIGHT",
+                      _getBmiCategoryTitle(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
