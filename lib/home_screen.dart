@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Icon(Icons.male, color: Colors.white, size: 60),
                         SectionLabelWidget(
-                          sectionLabel: "MALE",
+                          sectionHeader: "MALE",
                           textColor: Colors.deepPurple,
                         ),
                       ],
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Icon(Icons.female, color: Colors.white, size: 60),
                         SectionLabelWidget(
-                          sectionLabel: "FEMALE",
+                          sectionHeader: "FEMALE",
                           textColor: Colors.pink,
                         ),
                       ],
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SectionLabelWidget(sectionLabel: "HEIGHT"),
+                  SectionLabelWidget(sectionHeader: "HEIGHT"),
                   ValueWidget(value: height.toStringAsFixed(0)),
                   Slider(
                     value: height,
@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SectionLabelWidget(sectionLabel: "WEIGHT"),
+                      SectionLabelWidget(sectionHeader: "WEIGHT"),
                       ValueWidget(value: weight.toString()),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SectionLabelWidget(sectionLabel: 'AGE'),
+                      SectionLabelWidget(sectionHeader: 'AGE'),
                       ValueWidget(value: age.toString()),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
