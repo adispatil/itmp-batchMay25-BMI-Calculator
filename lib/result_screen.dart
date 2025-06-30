@@ -18,6 +18,10 @@ class _ResultScreenState extends State<ResultScreen> {
       return "Moderate Thinness";
     } else if (widget.bmiResult >= 17.0 && widget.bmiResult <= 18.5) {
       return "Mild Thinness";
+    } else if (widget.bmiResult > 18.5 && widget.bmiResult <= 25.0) {
+      return "Normal";
+    } else if (widget.bmiResult > 25.0 && widget.bmiResult <= 30.0) {
+      return "Overweight";
     } else {
       return "Overweight";
     }
